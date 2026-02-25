@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palaknandani Rathore Cars</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+/* Header */
+header{
+background:#000;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+header h1{
+font-size:22px;
+}
+
+header p{
+font-size:14px;
+color:#ccc;
+}
+
+/* Navigation */
+nav{
+background:#ff3c00;
+text-align:center;
+padding:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-size:16px;
+}
+
+/* Hero section */
+.hero{
+background:url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8') center/cover;
+color:white;
+text-align:center;
+padding:60px 15px;
+}
+
+.hero h2{
+font-size:26px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+/* Car section */
+.container{
+padding:15px;
+}
+
+.car{
+background:white;
+margin-bottom:15px;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+.car img{
+width:100%;
+}
+
+.car-info{
+padding:10px;
+}
+
+.car-info h3{
+font-size:18px;
+margin-bottom:5px;
+}
+
+.price{
+color:#ff3c00;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+button{
+background:#ff3c00;
+color:white;
+border:none;
+padding:10px;
+width:100%;
+border-radius:5px;
+font-size:16px;
+}
+
+/* Footer */
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:15px;
+font-size:14px;
+}
+
+/* Mobile responsive */
+@media(min-width:600px){
+
+.container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Palaknandani Rathore Cars</h1>
+<p>Best Cars at Best Price</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Cars</a>
+<a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+<h2>Buy Your Dream Car Today</h2>
+<p>Trusted car dealer - Palaknandani Rathore</p>
+</section>
+
+<section class="container">
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+<div class="car-info">
+<h3>BMW X5</h3>
+<p class="price">₹75,00,000</p>
+<button onclick="alert('Contact Owner: Palaknandani Rathore')">Contact</button>
+</div>
+</div>
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<div class="car-info">
+<h3>Audi A4</h3>
+<p class="price">₹55,00,000</p>
+<button onclick="alert('Contact Owner: Palaknandani Rathore')">Contact</button>
+</div>
+</div>
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+<div class="car-info">
+<h3>Mercedes Benz</h3>
+<p class="price">₹65,00,000</p>
+<button onclick="alert('Contact Owner: Palaknandani Rathore')">Contact</button>
+</div>
+</div>
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+<div class="car-info">
+<h3>Toyota Fortuner</h3>
+<p class="price">₹45,00,000</p>
+<button onclick="alert('Contact Owner: Palaknandani Rathore')">Contact</button>
+</div>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Palaknandani Rathore Cars</p>
+<p>Owner: Palaknandani Rathore</p>
+</footer>
+
+</body>
+</html>
