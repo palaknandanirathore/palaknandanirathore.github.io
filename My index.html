@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rathore World</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f0f0f0;
+}
+
+header{
+background:#800000;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+nav{
+background:#333;
+padding:10px;
+text-align:center;
+}
+
+nav button{
+padding:10px;
+margin:5px;
+background:#ffcc00;
+border:none;
+font-weight:bold;
+}
+
+.card{
+background:white;
+margin:10px;
+padding:10px;
+border-radius:10px;
+box-shadow:0 0 5px gray;
+}
+
+.hidden{
+display:none;
+}
+
+footer{
+background:#800000;
+color:white;
+padding:10px;
+text-align:center;
+margin-top:20px;
+}
+
+.review{
+background:white;
+padding:10px;
+margin:10px;
+border-radius:10px;
+}
+
+.contact{
+background:white;
+padding:10px;
+margin:10px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Rathore World</h1>
+<p>Owner: Palak Nandani</p>
+</header>
+
+<nav>
+
+<button onclick="show('home')">Home</button>
+
+<button onclick="show('books')">Books</button>
+
+<button onclick="show('contact')">Contact</button>
+
+<button onclick="show('review')">Reviews</button>
+
+</nav>
+
+<!-- HOME PAGE -->
+
+<div id="home">
+
+<div class="card" onclick="detail('Maharana Pratap',1540,1597)">
+<h3>Maharana Pratap</h3>
+<p>Bravest king of Mewar</p>
+</div>
+
+<div class="card" onclick="detail('Prithviraj Chauhan',1166,1192)">
+<h3>Prithviraj Chauhan</h3>
+<p>King of Ajmer and Delhi</p>
+</div>
+
+<div class="card" onclick="detail('Rana Sanga',1482,1528)">
+<h3>Rana Sanga</h3>
+<p>Great Rajput warrior</p>
+</div>
+
+<div class="card" onclick="detail('Rao Jodha',1416,1489)">
+<h3>Rao Jodha</h3>
+<p>Founder of Jodhpur</p>
+</div>
+
+<div class="card" onclick="detail('Rao Bika',1438,1504)">
+<h3>Rao Bika</h3>
+<p>Founder of Bikaner</p>
+</div>
+
+<div class="card" onclick="detail('Rana Kumbha',1417,1468)">
+<h3>Rana Kumbha</h3>
+<p>Builder of Kumbhalgarh</p>
+</div>
+
+<div class="card" onclick="detail('Rana Udai Singh',1522,1572)">
+<h3>Rana Udai Singh</h3>
+<p>Founder of Udaipur</p>
+</div>
+
+<div class="card" onclick="detail('Amar Singh I',1559,1620)">
+<h3>Amar Singh I</h3>
+<p>Son of Maharana Pratap</p>
+</div>
+
+<div class="card" onclick="detail('Man Singh I',1550,1614)">
+<h3>Man Singh I</h3>
+<p>King of Amer</p>
+</div>
+
+<div class="card" onclick="detail('Raja Maldev',1511,1562)">
+<h3>Raja Maldev</h3>
+<p>Powerful ruler of Marwar</p>
+</div>
+
+<div class="card" onclick="detail('Suraj Mal',1707,1763)">
+<h3>Suraj Mal</h3>
+<p>Great king of Bharatpur</p>
+</div>
+
+<!-- add more kings -->
+
+</div>
+
+<!-- DETAIL PAGE -->
+
+<div id="detail" class="hidden">
+
+<button onclick="show('home')">Back</button>
+
+<div id="detailText"></div>
+
+</div>
+
+<!-- BOOK PAGE -->
+
+<div id="books" class="hidden">
+
+<div class="card">
+
+<h3>Rajasthan Kings Book</h3>
+
+<button onclick="read()">Read Book</button>
+
+<button onclick="buy()">Buy ₹199</button>
+
+<p id="book" class="hidden">
+
+This book contains full history of Rajasthan kings.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- CONTACT PAGE -->
+
+<div id="contact" class="hidden">
+
+<div class="contact">
+
+<h3>Contact Owner</h3>
+
+<p>Name: Palak Nandani</p>
+
+<p>Phone: 9929039976</p>
+
+<p>Email: rathoreworld@gmail.com</p>
+
+</div>
+
+</div>
+
+<!-- REVIEW PAGE -->
+
+<div id="review" class="hidden">
+
+<div class="review">
+
+<h3>Customer Reviews</h3>
+
+<p>⭐⭐⭐⭐⭐ Excellent website!</p>
+
+<p>⭐⭐⭐⭐ Very useful for students</p>
+
+<p>⭐⭐⭐⭐⭐ Amazing history</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© Rathore World  
+Contact: 9929039976  
+
+</footer>
+
+<script>
+
+function show(page){
+
+document.getElementById("home").classList.add("hidden")
+
+document.getElementById("books").classList.add("hidden")
+
+document.getElementById("contact").classList.add("hidden")
+
+document.getElementById("review").classList.add("hidden")
+
+document.getElementById("detail").classList.add("hidden")
+
+document.getElementById(page).classList.remove("hidden")
+
+}
+
+function detail(name,birth,death){
+
+document.getElementById("detailText").innerHTML=
+
+"<h2>"+name+"</h2>Born:"+birth+"<br>Death:"+death+"<br>Great king of Rajasthan"
+
+show("detail")
+
+}
+
+function read(){
+
+document.getElementById("book").classList.remove("hidden")
+
+}
+
+function buy(){
+
+alert("Book Purchased!")
+
+}
+
+</script>
+
+</body>
+
+</html>
